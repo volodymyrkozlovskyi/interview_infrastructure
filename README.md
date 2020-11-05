@@ -15,7 +15,7 @@
 6. Terraform apply.
 
 **By default, this code will create an infrastructure of:**
-  - 1 VPC.
+  -. 1 VPC.
   - 2 public and 2 private subnets.
   - internet gateway.
   - NAT gateway with Elastic IP for each public subnet.
