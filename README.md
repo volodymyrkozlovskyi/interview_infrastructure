@@ -3,12 +3,12 @@
 ### How to use:
 1. pull/download this repository to your computer.
 2. change variables:
-- region                  = set the AWS region that you want use to build infrastructure.
-- vpc_cidr                = to set cidr block for your networking.
-- public_subnet_cidrs     = set the cidr for your public subnets and their quantity.
-- private_subnet_cidrs    = set the cidr for your public subnets and their quantity.
-- key                     = name of your ssh key for connection to instances.
-- instance_volume_size_gb = size of hard drive for instances in GB.
+  - region                  = set the AWS region that you want use to build infrastructure.
+  - vpc_cidr                = to set cidr block for your networking.
+  - public_subnet_cidrs     = set the cidr for your public subnets and their quantity.
+  - private_subnet_cidrs    = set the cidr for your public subnets and their quantity.
+  - key                     = name of your ssh key for connection to instances.
+  - instance_volume_size_gb = size of hard drive for instances in GB.
 3. export your AWS_SECRET_ACCESS_KEY and AWS_ACCESS_KEY_ID.
 4. run terraform init.
 5. terraform plan to see if there are no errors and see how many resources will be created.
