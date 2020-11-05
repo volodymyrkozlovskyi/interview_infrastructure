@@ -15,20 +15,18 @@
 6. Terraform apply.
 
 ### By default, this code will create an infrastructure of:
-    - 1 VPC.
-    - 2 public and 2 private subnets.
-    - Internet gateway.
-    - NAT gateway with Elastic IP for each public subnet.
-    - Routes and association for public subnets to the internet gateway.
-    - Routes and association for private subnets to NAT.
-    - 3 security groups for bastion host, web app, and load balancer.
-    - Launch configuration for bastion host and application server.
-    - Autoscaling group for bastion host and application server (minimum 1, maximum 1).
-    - Elastic load balancer (application) will be placed in public subnets listen for HTTP over port 80 and forward to the application server in a private subnet.
+- 1 VPC.
+- 2 public and 2 private subnets.
+- Internet gateway.
+- NAT gateway with Elastic IP for each public subnet.
+- Routes and association for public subnets to the internet gateway.
+- Routes and association for private subnets to NAT.
+- 3 security groups for bastion host, web app, and load balancer.
+- Launch configuration for bastion host and application server.
+- Autoscaling group for bastion host and application server (minimum 1, maximum 1).
+- Elastic load balancer (application) will be placed in public subnets listen for HTTP over port 80 and forward to the application server in a private subnet.
 
-There is a user_data script for the application server. I made it just to speed up the process of application deployment
-it will install system updates, docker, and docker-compose.
-Then pulling the repository from git hub with the application (https://github.com/volodymyrkozlovskyi/to_do.git),
-exports environment variables needed for application to work.
-At the end of the script, it runs the commands docker-compose -f docker-compose-deploy.yml up --build -d and docker-compose -f docker-compose-deploy.yml run app python manage.py migrate
-to build and run the containers and migrate database schema for the freshly installed app.
+There is a user_data script for the application server.
+I made it just to speed up the process of application deployment it will install system updates, docker, and docker-compose.
+Then pulling the repository from git hub with the application (https://github.com/volodymyrkozlovskyi/to_do.git), exports environment variables needed for application to work.
+At the end of the script, it runs the commands docker-compose -f docker-compose-deploy.yml up --build -d and docker-compose -f docker-compose-deploy.yml run app python manage.py migrate to build and run the containers and migrate database schema for the freshly installed app.
