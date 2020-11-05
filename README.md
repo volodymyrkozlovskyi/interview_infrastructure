@@ -1,6 +1,6 @@
+#This simple AWS infrastructure as code created with Terraform and made for DevOps position interview.
 
-<<<<<<< HEAD
-How to use:
+##How to use:
   1) pull/download this repository to your computer
   2) change variables:
       - region                  = set the AWS region that you want use to build infrastructure
@@ -32,5 +32,3 @@ Then pulling the repository from git hub with the application (https://github.co
 exports environment variables needed for application to work.
 At the end of the script, it runs the commands docker-compose -f docker-compose-deploy.yml up --build -d and docker-compose -f docker-compose-deploy.yml run app python manage.py migrate
 to build and run the containers and migrate database schema for the freshly installed app.
-=======
->>>>>>> 2aac01a4d127e87506d663520d4f519754ccb8fe
