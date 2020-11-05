@@ -26,8 +26,6 @@ By default, this code will create an infrastructure of:
   - autoscaling group for bastion host and application server (minimum 1, maximum 1)
   - elastic load balancer (application) will be placed in public subnets listen for HTTP over port 80 and forward to the application server in a private subnet
 
-
-
 There is a user_data script for the application server. I made it just to speed up the process of application deployment
 it will install system updates, docker, and docker-compose.
 Then pulling the repository from git hub with the application (https://github.com/volodymyrkozlovskyi/to_do.git),
