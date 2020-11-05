@@ -14,7 +14,7 @@
 5. Terraform plan to see if there are no errors and see how many resources will be created.
 6. Terraform apply.
 
-**By default, this code will create an infrastructure of:**
+### By default, this code will create an infrastructure of:
     - 1 VPC.
     - 2 public and 2 private subnets.
     - Internet gateway.
